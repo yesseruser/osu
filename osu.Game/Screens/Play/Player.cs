@@ -1094,6 +1094,9 @@ namespace osu.Game.Screens.Play
 
             void completeResume()
             {
+                if (!IsResuming)
+                    return;
+
                 GameplayClockContainer.Start();
                 IsResuming = false;
             }
